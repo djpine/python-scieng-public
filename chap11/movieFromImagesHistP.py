@@ -25,7 +25,7 @@ ax1.axis('off')
 ims = []
 angles = []
 for i, fname in enumerate(sorted(glob('pngs/s0*.png'))):
-    print(fname)  # uncomment to follow loading of image frames
+    # print(fname)  # uncomment to follow loading of image frames
     im = ax1.imshow(Image.open(fname), animated=True)  # image
     x = np.array([r['x1'][i], r['xc'][i], r['x2'][i]])  # 3 balls
     y = np.array([r['y1'][i], r['yc'][i], r['y2'][i]])  # joined by
