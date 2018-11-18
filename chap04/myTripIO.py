@@ -12,3 +12,11 @@ time = distance/speed
 gallons = distance/mpg
 cost = gallons*costPerGallon
 print(time, gallons, cost)
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-01-06
+
+Scripting example with simple print output
+"""

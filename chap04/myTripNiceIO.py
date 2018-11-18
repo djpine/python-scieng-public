@@ -16,3 +16,11 @@ print("Gasoline used = {0:0.1f} gallons (@ {1:0.0f} mpg)"
       .format(gallons, mpg))
 print("Cost of gasoline = ${0:0.2f} (@ ${1:0.2f}/gallon)"
       .format(cost, costPerGallon))
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-01-06
+
+Scripting example with formatted print output
+"""
