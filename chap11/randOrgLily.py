@@ -96,7 +96,8 @@ execute until some condition is met.  Useful for random
 processes where exact number of steps is not known ahead
 of time.
 
-To make a move of the first 100 frames, include this line
-the FuncAnimation call (needs ffmped):
-ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
+To save a movie of the first 100 frames, uncomment line 86.
+To save more than 100 files, add the save_count keyword
+argument.  For example, to save 1000 frames, add:
+save_count=1000
 """
