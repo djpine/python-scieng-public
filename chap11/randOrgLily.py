@@ -89,7 +89,7 @@ plt.show()
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
-Last edited: 2018-01-06
+Code last edited: 2018-01-06
 
 Demonstrates how to make an animation that continues to
 execute until some condition is met.  Useful for random
