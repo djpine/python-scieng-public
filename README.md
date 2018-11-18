@@ -1,5 +1,5 @@
 # python-scieng-public
-**Python programs and data files for
+**Python programs and data files for<br/>
 "Introduction to Python for Science and Engineering"**
 
 by David J. Pine
