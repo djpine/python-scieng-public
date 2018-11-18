@@ -4,7 +4,7 @@
 
 by David J. Pine
 
-Publisher: CRC Press; 1 edition (November 30, 2018)
+Publisher: CRC Press; 1 edition (November 30, 2018)\n
            Taylor and Francis Broup
 Series: Series in Computational Physics
 Paperback: 368 pages
