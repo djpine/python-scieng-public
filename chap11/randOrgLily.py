@@ -98,6 +98,6 @@ of time.
 
 To save a movie of the first 100 frames, uncomment line 86.
 To save more than 100 files, add the save_count keyword
-argument.  For example, to save 1000 frames, add:
-save_count=1000
+argument to FuncAnimation.  For example, to save 1000
+frames, add: save_count=1000
 """
