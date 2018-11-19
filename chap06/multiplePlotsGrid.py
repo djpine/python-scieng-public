@@ -21,8 +21,8 @@ ax[1, 2].plot(x, np.ma.masked_where(np.abs(cot) > 20., cot),
 ax[0, 0].set_ylim(-5, 5)
 ax[0, 0].set_xlim(-2*np.pi, 2*np.pi)
 ax[0, 0].set_xticks(np.pi*np.array([-2, -1, 0, 1, 2]))
-ax[0, 0].set_xticklabels(['-2$\pi$', '-$\pi$', '0',
-                          '$\pi$', '2$\pi$'])
+ax[0, 0].set_xticklabels([r'-2$\pi$', r'-$\pi$', '0',
+                          r'$\pi$', r'2$\pi$'])
 
 ax[0, 2].patch.set_facecolor('lightgray')
 
@@ -41,5 +41,5 @@ Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2018-09-10
 
-Scripting example with formatted print output
+Multiple plots with matplotlib
 """

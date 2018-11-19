@@ -18,5 +18,13 @@ ax2.set_ylabel('decay', color='C3')  # axis label
 ax2.tick_params('y', colors='C3')    # ticks & numbers
 
 fig.tight_layout()
-plt.show()
-plt.savefig('figures/twoAxes.pdf')
+fig.savefig('figures/twoAxes.pdf')
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2017-05-27
+
+Two different y axes using matplotlib
+"""

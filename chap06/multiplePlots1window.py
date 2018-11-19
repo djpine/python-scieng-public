@@ -52,13 +52,13 @@ ax3.set_title('sinc function')
 # fig.tight_layout() adjusts white space to
 # avoid collisions between subplots
 fig.tight_layout()
-fig.show()
 fig.savefig("figures/multiplePlots1window.pdf")
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2018-09-22
 
-Scripting example with formatted print output
+Multiple plots in a window with matplotlib
 """

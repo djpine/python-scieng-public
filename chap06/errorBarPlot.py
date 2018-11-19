@@ -30,5 +30,5 @@ Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2017-05-27
 
-Scripting example with formatted print output
+Plot with error bars with matplotlib
 """

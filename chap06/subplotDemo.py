@@ -40,3 +40,11 @@ plt.ylabel("cot(theta)")
 
 plt.savefig('figures/subplotDemo.pdf')
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-15
+
+Subplots using pyplot in matplotlib
+"""

@@ -46,13 +46,13 @@ ax.text(0.85, 0.35,
         transform=ax.transAxes)
 
 fig.tight_layout()
-fig.show()
 fig.savefig('./figures/mplLatexDemo.pdf')
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2018-09-15
 
-Scripting example with formatted print output
+Demonstration of Latex equations in matplotlib
 """

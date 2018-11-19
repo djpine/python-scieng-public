@@ -51,6 +51,14 @@ for ax in (ax1, ax2):
     ax.set_aspect('equal')
     ax.set_xlim(-0.7*xlim, 0.7*xlim)
     ax.set_ylim(-0.7*zlim, 0.7*zlim)
-plt.tight_layout()
-plt.show()
-plt.savefig('./figures/stokesFlowStream.pdf')
+fig.tight_layout()
+fig.savefig('./figures/stokesFlowStream.pdf')
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-15
+
+Streamplot example using matplotlib
+"""

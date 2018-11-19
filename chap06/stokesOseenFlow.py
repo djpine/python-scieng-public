@@ -79,5 +79,13 @@ ax.set_xlim(-xlim, xlim)
 ax.set_ylim(-zlim, zlim)
 ax.text(0.5, 0.99, r"$Re = {0:g}$".format(Re), ha='center',
         va='top', transform=ax.transAxes)
-plt.show()
-plt.savefig('./figures/stokesOseenFlow.pdf')
+fig.savefig('./figures/stokesOseenFlow.pdf')
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-15
+
+Streamplot with color example using matplotlib
+"""

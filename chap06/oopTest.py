@@ -18,5 +18,6 @@ Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2017-07-05
 
-Scripting example with formatted print output
+Plottingxample using only OOP (without pyplot) in
+matplotlib
 """

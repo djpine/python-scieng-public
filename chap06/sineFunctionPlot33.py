@@ -10,5 +10,5 @@ Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2017-05-05
 
-Scripting example with formatted print output
+Simple sine plot using matplotlib
 """

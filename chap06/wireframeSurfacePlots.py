@@ -21,7 +21,7 @@ fig, ax = plt.subplots(1, 2, figsize=(9.2, 4),
                        subplot_kw={'projection': '3d'})
 for i in range(2):
     ax[i].set_zlim(-3, 2)
-    ax[i].xaxis.set_ticks(range(a+1)) # manually set ticks
+    ax[i].xaxis.set_ticks(range(a+1))  # manually set ticks
     ax[i].yaxis.set_ticks(range(b+1))
     ax[i].set_xlabel(r'$x$')
     ax[i].set_ylabel(r'$y$')
@@ -29,12 +29,12 @@ for i in range(2):
     ax[i].view_init(40, -30)
 
 # Plot wireframe and surface plots.
-plt.subplots_adjust(left=0.04, bottom=0.04, right=0.96,
+fig.subplots_adjust(left=0.04, bottom=0.04, right=0.96,
                     top=0.96, wspace=0.05)
 p0 = ax[0].plot_wireframe(X, Y, Z, rcount=40, ccount=40,
                           color='C1')
 p1 = ax[1].plot_surface(X, Y, Z, rcount=50, ccount=50,
                         color='C1')
-plt.subplots_adjust(left=0.0)
-plt.show()
-plt.savefig('./figures/wireframeSurfacePlots.pdf')
+fig.subplots_adjust(left=0.0)
+fig.savefig('./figures/wireframeSurfacePlots.pdf')
+fig.show()
