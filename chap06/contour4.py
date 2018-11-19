@@ -53,7 +53,16 @@ for i in range(2):
         ax[i, j].set_aspect('equal')
         ax[i, j].set_xlim(0, a)
         ax[i, j].set_ylim(0, b)
-plt.subplots_adjust(left=0.06, bottom=0.07, right=0.99,
+fig.subplots_adjust(left=0.06, bottom=0.07, right=0.99,
                     top=0.99, wspace=0.06, hspace=0.09)
-plt.show()
-plt.savefig('./figures/contour4.pdf')
+fig.show()
+fig.savefig('./figures/contour4.pdf')
+
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-10
+
+Scripting example with formatted print output
+"""

@@ -23,3 +23,11 @@ plt.savefig('figures/WavyPulse.pdf')
 
 # display plot on screen
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Scripting example with formatted print output
+"""

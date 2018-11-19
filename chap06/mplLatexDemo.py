@@ -8,6 +8,7 @@ def f0(t, omega, gamma, tau):
     f2 = 1.0+(gamma/omega)*f1
     return np.exp(-t*f2/tau)
 
+
 omega = 12.0
 gamma = 8.0
 tau = 1.0
@@ -15,8 +16,8 @@ t = np.linspace(0.01, 10.0, 500)
 f = f0(t, omega, gamma, tau)
 
 plt.rc('mathtext', fontset='stix')  # Use with mathtext
-#plt.rc('text', usetex=True)        # Use with Latex
-#plt.rc('font', family='serif')     # Use with Latex
+# plt.rc('text', usetex=True)        # Use with Latex
+# plt.rc('font', family='serif')     # Use with Latex
 
 fig, ax = plt.subplots(figsize=(7.5, 4.5))
 ax.plot(t, f, color='C0')
@@ -45,5 +46,13 @@ ax.text(0.85, 0.35,
         transform=ax.transAxes)
 
 fig.tight_layout()
-plt.show()
-plt.savefig('./figures/mplLatexDemo.pdf')
+fig.show()
+fig.savefig('./figures/mplLatexDemo.pdf')
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-15
+
+Scripting example with formatted print output
+"""
