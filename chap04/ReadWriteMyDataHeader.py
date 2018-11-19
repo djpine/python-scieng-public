@@ -13,3 +13,11 @@ info += 'uncertainty (mm)'
 np.savetxt('ReadWriteMyDataHeader.txt',
            list(zip(dataPt, time, height, error)),
            header=info, fmt="%12.1f")
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-20
+
+Scripting example with formatted print output
+"""

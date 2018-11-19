@@ -9,3 +9,11 @@ elif b == 0.0:
 else:
     print("Solutions are complex")    # block 3
 print("Finished")
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-20
+
+Scripting example with formatted print output
+"""
