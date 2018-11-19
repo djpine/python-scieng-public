@@ -36,3 +36,11 @@ plt.savefig('figures/semilogDemo.pdf')
 
 # display plot on screen
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2017-05-27
+
+Scripting example with formatted print output
+"""

@@ -32,6 +32,14 @@ for i in range(2):
         ax[i, j].axhline(color='gray', zorder=-1)
         ax[i, j].set_ylabel(ylab[i][j])
 
-plt.show()
-plt.savefig('figures/multiplePlotsGrid.pdf')
+fig.show()
+fig.savefig('figures/multiplePlotsGrid.pdf')
 fig.canvas.manager.window.raise_()  # fig to front
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-10
+
+Scripting example with formatted print output
+"""
