@@ -29,3 +29,11 @@ print(' *****')
 print('N. 12345678901234567890')
 print('O. {0:s}--{1:8d},{2:10.3e}'
       .format(string2, int1, float2))
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-17
+
+Scripting example with formatted print output
+"""
