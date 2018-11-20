@@ -6,6 +6,7 @@ def test(s, v, t, l, a):
     a[0] = 963.2
     return s, v, t, l, a
 
+
 import numpy as np
 
 s = "How do you do?"
@@ -41,3 +42,12 @@ print("l = {}".format(l))
 print("a = "),
 print(a)
 print('*************')
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-18
+
+Test about how different kinds of variables, mutable
+and immutable, are passed to functions
+"""
