@@ -63,8 +63,8 @@ def updatePlot(mv):
 
 ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          frames=move(L, N, eps),
-                         interval=10, save_count=200,
-                         blit=True, repeat=False)
+                         interval=10, blit=True,
+                         repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('randOrg.mp4', writer='ffmpeg', dpi=200)
 fig.show()
