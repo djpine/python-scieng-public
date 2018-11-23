@@ -51,13 +51,13 @@ ani = anim.ArtistAnimation(fig, artists=ims, interval=33,
                            repeat=False, blit=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('movieFromImagesHistP.mp4', writer='ffmpeg')
-plt.show()
-
+fig.show()
 
 """
-Demonstrates how to read a sequence of images from disk,
-animate them for display, overlay other Artists onto image,
-add a second animated figure, and then save the animation
+Introduction to Python for Science & Engineering
+by David J. Pine
+Last edited: 2018-09-15
 
-Author: David J. Pine
+Demonstrates how to make an animation that combines a
+sequence of frames with a data plot.
 """
