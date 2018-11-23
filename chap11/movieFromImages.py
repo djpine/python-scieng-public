@@ -26,6 +26,6 @@ by David J. Pine
 Code last edited: 2018-09-19
 
 Makes a movie from images read from a folder containing
-a sequence of images.  Uses matplotlib'sArtistAnimation
+a sequence of images.  Uses matplotlib's ArtistAnimation
 routine.
 """
