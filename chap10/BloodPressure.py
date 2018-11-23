@@ -91,17 +91,10 @@ fig.savefig('./figures/BloodPressure.pdf')
 fig.show()
 
 """
-Reads blood pressure, pulse data from Excel file & plots it.
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2017-07-15
 
-Inputs:
-    Excel file with header & data in format
-    ---------------------------------------
-    Date   Time   BP_sys   BP_dia   Pulse
-    1-Jun  21:34  115      75       58
-
-Outputs:
-    Two subplot figure of blood pressure & pulse vs time
-
-Author:
-    DJ Pine July 2017
+Read in blood pressure data from BloodPressure.xlsx,
+parse in different ways, and plot.
 """
