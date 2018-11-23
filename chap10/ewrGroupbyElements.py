@@ -8,3 +8,12 @@ for airln, grp in ewr.groupby(ewr['Airline']):
 
     if airln == 'AVIANCA':
         break
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Demonstrates how to itereate3 over groups using
+Pandas.
+"""
