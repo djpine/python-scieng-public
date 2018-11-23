@@ -8,6 +8,7 @@ def ww(x, t, k0, a0, vp, vg):
     u = np.exp(1.0j*k0*(x-vp*t)-0.25*(x-vg*t)**2/tc)
     return np.real(u/np.sqrt(tc))
 
+
 wavelength = 1.0
 a0 = 1.0
 k0 = 2*np.pi/wavelength
@@ -17,7 +18,7 @@ runtime = 40*period              # total time to follow wave
 rundistance = 0.6*vg*runtime     # total distance to plot wave
 dt = period/6.0                  # time between frames
 tsteps = int(runtime/dt)         # total number of times wave
-                                 # form is calculated
+# form is calculated
 print('Frame time interval = {0:0.3g} ms'.format(1000*dt))
 print('Frame rate = {0:0.3g} frames/s'.format(1.0/dt))
 
@@ -36,9 +37,19 @@ def animate(i):
     line.set_ydata(ww(x, t, k0, a0, vp, vg))  # update y-data
     return line,
 
+
 ani = anim.FuncAnimation(fig, func=animate,
                          frames=range(tsteps),
                          interval=1000*dt, blit=True)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
-ani.save('wavepacket.mp4', writer='ffmpeg')
-plt.show()
+# ani.save('wavepacket.mp4', writer='ffmpeg')
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Demonstrates the animation of a function using
+matplotlib's FuncAnimation routine.
+"""
