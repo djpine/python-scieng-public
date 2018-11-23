@@ -87,3 +87,12 @@ ax[2, 1].text(0.5, 0.9, 'Laguerre', ha='center',
 plt.tight_layout()
 plt.savefig("specFuncPlotsBW.pdf")
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-17
+
+Demonstrates calls to SciPy special functions and
+plots them.
+"""
