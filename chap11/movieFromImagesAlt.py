@@ -26,4 +26,14 @@ ani = anim.ArtistAnimation(fig, artists=ims, interval=10,
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('sncs2d.mp4', writer='ffmpeg')  # need ffmpeg !)
 
-plt.show()
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Makes a movie from images generated on the fly using
+matplotlib's ArtistAnimation routine.  Adapted from
+https://matplotlib.org/examples/animation/dynamic_image2.html
+"""

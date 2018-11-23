@@ -25,6 +25,7 @@ Introduction to Python for Science & Engineering
 by David J. Pine
 Code last edited: 2018-09-19
 
-Makes a movie from images using matplotlib's
-ArtistAnimation routine.
+Makes a movie from images read from a folder containing
+a sequence of images.  Uses matplotlib'sArtistAnimation
+routine.
 """
