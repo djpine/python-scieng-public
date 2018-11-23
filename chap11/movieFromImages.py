@@ -16,6 +16,14 @@ for fname in sorted(glob('pacb/s0*.png')):
 ani = anim.ArtistAnimation(fig, artists=ims, interval=33,
                            repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
-# ani.save('pacb.mp4', writer='ffmpeg')  # ffmpeg
 
-plt.show()
+fig.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Makes a movie from images using matplotlib's
+ArtistAnimation routine.
+"""
