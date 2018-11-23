@@ -63,23 +63,19 @@ def updatePlot(mv):
 
 ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          frames=move(L, N, eps),
-                         interval=10, blit=True,
-                         repeat=False)
+                         interval=10, save_count=200,
+                         blit=True, repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('randOrg.mp4', writer='ffmpeg', dpi=200)
-plt.show()
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
-Last edited: 2018-01-06
+Last edited: 2018-10-15
 
 Demonstrates how to make an animation that continues to
 execute until some condition is met.  Useful for random
 processes where exact number of steps is not known ahead
 of time.
-
-To make a move of the first 100 frames, include this line
-the FuncAnimation call (needs ffmped):
-ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
 """
