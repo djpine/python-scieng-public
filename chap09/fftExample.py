@@ -29,3 +29,12 @@ ax2.set_ylabel(r'$G(f)$')
 plt.tight_layout()
 plt.show()
 plt.savefig('fftExample.pdf')
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-17
+
+Demonstrates calls to SciPy special functions and
+plots them.
+"""
