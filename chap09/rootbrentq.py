@@ -17,7 +17,7 @@ ry = np.zeros(3)
 # print true roots using a list comprehension
 print('\nTrue roots:')
 print('\n'.join('f({0:0.5f}) = {1:0.2e}'
-      .format(x, tdl(x)) for x in rx))
+                .format(x, tdl(x)) for x in rx))
 
 # Find false roots
 rx1f = scipy.optimize.brentq(tdl, 0.49*np.pi, 0.51*np.pi)
@@ -27,7 +27,7 @@ rxf = np.array([rx1f, rx2f, rx3f])
 # print false roots using a list comprehension
 print('\nFalse roots:')
 print('\n'.join('f({0:0.5f}) = {1:0.2e}'
-      .format(x, tdl(x)) for x in rxf))
+                .format(x, tdl(x)) for x in rxf))
 
 # Plot function and various roots
 x = np.linspace(0.7, 8, 128)
@@ -57,3 +57,12 @@ plt.legend(numpoints=1, fontsize='small',
 plt.tight_layout()
 plt.show()
 plt.savefig('figures/rootbrentq.pdf')
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-17
+
+Finds root of a nonlinear equation of a single
+variable using the Brent method.
+"""
