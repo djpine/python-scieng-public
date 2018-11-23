@@ -38,7 +38,7 @@ def move(L, N, eps):               # generator for updating
         yield t, moves, x, changes
 
 
-N, L, eps = 85, 100, 0.25  # inputs for algorithm
+N, L, eps = 86, 100, 0.25  # inputs for algorithm
 
 circumference = float(L)
 radius = circumference/(2.0*np.pi)
@@ -80,24 +80,23 @@ def updatePlot(mv):
 
 ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          frames=move(L, N, eps),
-                         interval=10, blit=False,
-                         repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
-plt.show()
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
-Code last edited: 2018-01-06
+Last edited: 2018-10-15
 
 Demonstrates how to make an animation that continues to
 execute until some condition is met.  Useful for random
 processes where exact number of steps is not known ahead
 of time.
 
-To save a movie of the first 100 frames, uncomment line 86.
-To save more than 100 frames, add the save_count keyword
-argument to FuncAnimation.  For example, to save 1000
-frames, add: save_count=1000
+To make a move of the first 100 frames, include this line
+the FuncAnimation call (needs ffmped):
+ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200.
+For movies with more than 2000 frames, use the keyword
+argument "save_count=2000".
 """
