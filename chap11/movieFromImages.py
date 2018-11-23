@@ -16,6 +16,7 @@ for fname in sorted(glob('pacb/s0*.png')):
 ani = anim.ArtistAnimation(fig, artists=ims, interval=33,
                            repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
+# ani.save('pacb.mp4', writer='ffmpeg')  # ffmpeg
 
 fig.show()
 
