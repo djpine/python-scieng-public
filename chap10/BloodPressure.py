@@ -17,8 +17,8 @@ PulsePM = bp.loc[bp.index.hour >= 12, 'Pulse']
 # Set up figure with 2 subplots and plot BP data
 
 fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True,
-                      gridspec_kw={'height_ratios': [2, 1]},
-                      figsize=(10, 6))
+                               gridspec_kw={'height_ratios': [2, 1]},
+                               figsize=(10, 6))
 fig.subplots_adjust(left=0.065, right=0.99, hspace=0.06)
 sysPM.plot(ax=ax1, marker='o', ms=3, lw=0, color='C1',
            label='systolic PM')
@@ -86,9 +86,9 @@ ax2.set_ylabel('pulse (/min)')
 ax2.legend(loc=(0.4, 0.7))
 ax2.grid(dashes=(1, 2))
 
-plt.tight_layout()
-plt.show()
-plt.savefig('./figures/BloodPressure.pdf')
+fig.tight_layout()
+fig.savefig('./figures/BloodPressure.pdf')
+fig.show()
 
 """
 Reads blood pressure, pulse data from Excel file & plots it.
