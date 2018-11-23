@@ -44,12 +44,15 @@ ani = animation.ArtistAnimation(fig, artists=ims, interval=33,
                                 repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('movieFromImagesAnnotated.mp4', writer='ffmpeg')
-plt.show()
+fig.show()
 
 """
-Demonstrates how to read a sequence of images from disk,
-animate them for display, overlay other Artists onto the
-image, and then save the animation.
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
 
-Author: David J. Pine
+Makes a movie from images read from a folder containing
+a sequence of images.  Add's annotations to the bare
+images read in.  Uses matplotlib's ArtistAnimation
+routine.
 """
