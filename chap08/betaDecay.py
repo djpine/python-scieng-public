@@ -74,3 +74,12 @@ plt.text(50, 5.4, "tau = {0:0.1f} $\pm$ {1:0.1f} days"
          .format(tau, dtau))
 plt.show()
 plt.savefig("betaDecay.pdf")
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-20
+
+Uses linear regression for fitting an exponential
+function by taking the logarithm of the y-data.
+"""

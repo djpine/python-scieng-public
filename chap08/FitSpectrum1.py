@@ -74,3 +74,12 @@ ax2.set_yticks((-20, 0, 20))
 
 plt.show()
 plt.savefig("FitSpectrum.pdf")
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-17
+
+Uses nonlinear fitting routine to for fitting a
+specturm to a Gaussian peak on a quadratic baseline.
+"""
