@@ -19,10 +19,19 @@ ax.legend(loc="lower left")
 ax.set_xlabel("theta (degrees)")
 ax.set_ylabel("intensity")
 for i in range(4):
-    ax.text(0.95, 0.9-i/18, "{} = {}".format(head[0][i],
-            head[1][i]), ha='right', fontsize=10,
-            transform=ax.transAxes)
-plt.tight_layout()
-plt.show()
+    ax.text(0.95, 0.9-i/18, "{} = {}"
+            .format(head[0][i], head[1][i]), ha='right',
+            fontsize=10, transform=ax.transAxes)
+fig.tight_layout()
+fig.show()
 # fig.canvas.manager.window.raise_()
-plt.savefig('ScatMiePlot.pdf')
+fig.savefig('ScatMiePlot.pdf')
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Demonstrates calls to SciPy special functions and
+plots them.
+"""
