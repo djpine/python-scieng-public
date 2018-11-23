@@ -8,3 +8,11 @@ for i in range(ewr.shape[0]):
         ewr.iloc[i, i_A] += timedelta(days=ewr.iloc[i, i_Ap])
     if ewr.iloc[i, i_Sp] >= 1:
         ewr.iloc[i, i_S] += timedelta(days=ewr.iloc[i, i_Sp])
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-19
+
+Snippit of code to set datetime stamps.
+"""
