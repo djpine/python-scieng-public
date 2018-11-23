@@ -61,3 +61,12 @@ ax3.set_xlim(0., twopi)
 plt.tight_layout()
 plt.savefig('figures/odePend.pdf')
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Code last edited: 2018-09-15
+
+Numerically solves for the angle as a function of time
+for a nonlinear pendulum.
+"""
