@@ -67,3 +67,14 @@ ani2 = anim.FuncAnimation(fig, func=animate,
 # ani2.save('movieSyncPlot1.mp4', extra_anim=(ani1, ),
 #           writer='ffmpeg', dpi=200)
 plt.show()
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Last edited: 2018-09-20
+
+Demonstrates how to combine a movie animated from images
+using ArtistAnimation with a function animation made with
+FuncAnimation into a single movie with frames from each
+animation synchronized with each other.
+"""
