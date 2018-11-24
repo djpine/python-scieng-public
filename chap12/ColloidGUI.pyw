@@ -133,3 +133,11 @@ app = QApplication(sys.argv)
 form = Form()
 form.show()
 sys.exit(app.exec_())
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Last edited: 2018-09-15
+
+Colloid GUI to calculate various properties of colloids.
+"""

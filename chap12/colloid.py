@@ -101,3 +101,11 @@ if __name__ == "__main__":
     print("particle gravitational height = {0:5.3g} m"
           .format(au_h2o_hc.grav_height()))
     au_h2o_hc.set_tempC(35.0)
+
+"""
+Introduction to Python for Science & Engineering
+by David J. Pine
+Last edited: 2018-09-15
+
+Colloid class to calculate various properties of colloids.
+"""
