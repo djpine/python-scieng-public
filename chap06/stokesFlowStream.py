@@ -5,10 +5,10 @@ from matplotlib.patches import Circle
 
 def v(u, a, x, z):
     """Return the velocity vector field v = (vx, vy)
-    around sphere at r=0."""
+    around sphere at r = 0."""
     r = np.sqrt(x*x+z*z)
-    R = a/r
-    RR = R*R
+    R = a / r
+    RR = R * R
     cs, sn = z/r, x/r
     vr = u * cs * (1.0 - 0.5 * R * (3.0 - RR))
     vtheta = -u * sn * (1.0 - 0.25 * R * (3.0 + RR))
