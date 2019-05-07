@@ -38,7 +38,7 @@ def move(L, N, eps):               # generator for updating
         yield t, moves, x, changes
 
 
-N, L, eps = 80, 100, 0.25  # inputs for algorithm
+N, L, eps = 86, 100, 0.25  # inputs for algorithm
 
 circumference = float(L)
 radius = circumference/(2.0*np.pi)
@@ -62,6 +62,15 @@ activity, = ax2.plot([], [], '-', color='C1')
 tm, number_active = [], []
 
 
+def init():
+    pStill, = ax.plot(np.ma.array(R, mask=True), R,
+                      'o', ms=12, color='C0')
+    pActiv, = ax.plot(np.ma.array(R, mask=True), R,
+                      'o', ms=12, color='C1')
+    activity.set_data(tm, number_active)
+    return pStill, pActiv, activity
+
+
 def updatePlot(mv):
     t, moves, x, changes = mv
     tm.append(t)
@@ -81,7 +90,7 @@ def updatePlot(mv):
 ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          frames=move(L, N, eps),
                          interval=10, blit=True,
-                         repeat=False)
+                         repeat=False, init_func=init)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
 fig.show()
