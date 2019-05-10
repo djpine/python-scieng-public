@@ -20,7 +20,8 @@ P0, fp0, fw0 = 80., 11., 2.
 
 # fit data using SciPy's Levenberg Marquart method
 nlfit, nlpcov = scipy.optimize.curve_fit(GaussPolyBase,
-                                         f, s, p0=[a0, b0, c0, P0, fp0, fw0], sigma=ds)
+                                         f, s, p0=[a0, b0, c0, P0, fp0, fw0],
+                                         sigma=ds)
 
 # unpack fitting parameters
 a, b, c, P, fp, fw = nlfit
