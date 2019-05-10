@@ -36,7 +36,7 @@ for i, fname in enumerate(sorted(glob('pngs/s0*.png'))):
                    .format(i, theta), va='top', ha='left',
                    color=[1, 1, 0.7], transform=ax1.transAxes)
     a, b = np.histogram(angles, bins=15, range=(90, 180),
-                        normed=True)
+                        density=True)  # normed=True is depricated
     xx = 0.5*(b[:-1]+b[1:])
     ax2.set_ylim(0, 0.03)
     ax2.set_xlabel('angle (degrees)')
