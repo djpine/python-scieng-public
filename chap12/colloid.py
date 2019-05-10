@@ -44,7 +44,7 @@ class Colloid():
         return hg
 
     def set_tempC(self, tempC):
-        """Sets temperature to a specfied value"""
+        """Sets temperature to a specified value"""
         self.tempC = tempC
         self.tempK = tempC + 273.15
 
