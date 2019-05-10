@@ -26,9 +26,9 @@ ax2.plot(f, np.imag(G), color='coral',
 ax2.legend()
 ax2.set_xlabel(r'$f$')
 ax2.set_ylabel(r'$G(f)$')
-plt.tight_layout()
-plt.show()
-plt.savefig('fftExample.pdf')
+fig.tight_layout()
+fig.savefig('figures/fftExample.pdf')
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
