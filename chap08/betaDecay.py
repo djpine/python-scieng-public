@@ -23,6 +23,7 @@ def redchisq(x, y, dy, slope, yint):
     chisq = (((y-yint-slope*x)/dy)**2).sum()
     return chisq/float(x.size-2)
 
+
 # Read data from data file
 t, N, dN = np.loadtxt("betaDecay.txt", skiprows=2, unpack=True)
 
@@ -59,21 +60,21 @@ plt.errorbar(X, Y, dY, fmt="oC0")
 plt.plot(Xfit, Yfit, "-C1", zorder=-1)
 plt.xlim(0, 100)
 plt.ylim(1.5, 7)
-plt.title(r"$\mathrm{Fit\ to:}\ \ln N = -t/\tau + \ln N_0$")
-plt.xlabel("$t$")
-plt.ylabel("ln($N$)")
-plt.text(50, 6.6, "A = ln N0 = {0:0.2f} $\pm$ {1:0.2f}"
+plt.title(r"$\mathrm{Fit\ to:}\ \ln\, N = -t/\tau + \ln\, N_0$")
+plt.xlabel(r"$t$")
+plt.ylabel(r"$\ln\,N$)")
+plt.text(50, 6.6, r"$A = \ln\, N_0 = {0:0.2f} \pm$ {1:0.2f}"
          .format(A, dA))
-plt.text(50, 6.3, "B = -1/tau = {0:0.4f} $\pm$ {1:0.4f}"
+plt.text(50, 6.3, r"$B = -1/\tau = {0:0.4f} \pm$ {1:0.4f}"
          .format(-B, dB))
 plt.text(50, 6.0, "$\chi_r^2$ = {0:0.3f}"
          .format(redchisqr))
-plt.text(50, 5.7, "N0 = {0:0.0f} $\pm$ {1:0.0f}"
+plt.text(50, 5.7, r"$N_0 = {0:0.0f} \pm$ {1:0.0f}"
          .format(N0, dN0))
-plt.text(50, 5.4, "tau = {0:0.1f} $\pm$ {1:0.1f} days"
+plt.text(50, 5.4, r"$\tau = {0:0.1f} \pm {1:0.1f}$ days"
          .format(tau, dtau))
-plt.show()
 plt.savefig("betaDecay.pdf")
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
