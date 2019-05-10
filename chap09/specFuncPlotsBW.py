@@ -84,9 +84,9 @@ ax[2, 1].set_xlim(-5, 8)
 ax[2, 1].set_ylim(-5, 10)
 ax[2, 1].text(0.5, 0.9, 'Laguerre', ha='center',
               va='top', transform=ax[2, 1].transAxes)
-plt.tight_layout()
-plt.savefig("specFuncPlotsBW.pdf")
-plt.show()
+fig.tight_layout()
+fig.savefig("figures/specFuncPlotsBW.pdf")
+fig.show()
 
 """
 Introduction to Python for Science & Engineering
