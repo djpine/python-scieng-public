@@ -78,4 +78,10 @@ Demonstrates how to make an animation that continues to
 execute until some condition is met.  Useful for random
 processes where exact number of steps is not known ahead
 of time.
+
+To make a movie of the first 100 frames, include this line
+the FuncAnimation call (needs ffmpeg):
+ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200.
+For movies with more than 2000 frames, use the keyword
+argument "save_count=2000".
 """

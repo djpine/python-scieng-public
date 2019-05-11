@@ -2,6 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as anim
 import matplotlib.gridspec as gridspec
+import warnings
+
+# ignore RuntimeWarning: invalid value encountered in less
+# mask = r < 0
+warnings.filterwarnings('ignore')
 
 
 def move(L, N, eps):               # generator for updating
@@ -38,7 +43,7 @@ def move(L, N, eps):               # generator for updating
         yield t, moves, x, changes
 
 
-N, L, eps = 86, 100, 0.25  # inputs for algorithm
+N, L, eps = 80, 100, 0.25  # inputs for algorithm
 
 circumference = float(L)
 radius = circumference/(2.0*np.pi)
@@ -61,14 +66,12 @@ ax2.set_ylabel('active particles')
 activity, = ax2.plot([], [], '-', color='C1')
 tm, number_active = [], []
 
-
-def init():
-    pStill, = ax.plot(np.ma.array(R, mask=True), R,
-                      'o', ms=12, color='C0')
-    pActiv, = ax.plot(np.ma.array(R, mask=True), R,
-                      'o', ms=12, color='C1')
-    activity.set_data(tm, number_active)
-    return pStill, pActiv, activity
+# Display N, L, and eps inside ring above plot
+ax3 = fig.add_subplot(gs[1], xlim=(0, 1), ylim=(0, 1))
+ax3.axis('off')
+info = 'N = {0:d}\nL = {1:d}\nε = {2:0.2f}'
+ax3.text(0.5, 0.5, info.format(N, L, eps), va='top',
+         ha='center', fontsize=16)
 
 
 def updatePlot(mv):
@@ -89,8 +92,8 @@ def updatePlot(mv):
 
 ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          frames=move(L, N, eps),
-                         interval=10, blit=True,
-                         repeat=False, init_func=init)
+                         interval=10, save_count=25000,
+                         blit=False, repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
 fig.show()
@@ -105,8 +108,8 @@ execute until some condition is met.  Useful for random
 processes where exact number of steps is not known ahead
 of time.
 
-To make a move of the first 100 frames, include this line
-the FuncAnimation call (needs ffmped):
+To make a movie of the first 100 frames, include this line
+the FuncAnimation call (needs ffmpeg):
 ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200.
 For movies with more than 2000 frames, use the keyword
 argument "save_count=2000".
