@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Read in data
-head = pd.read_table('ScatMieData.csv', sep='=', nrows=4,
-                     comment=',', header=None)
+# Read in data [read_table deprecated]
+head = pd.read_csv('ScatMieData.csv', sep='=', nrows=4,
+                   comment=',', header=None)
 scat = pd.read_csv('ScatMieData.csv', skiprows=4)
 
 theta = (180./np.pi)*np.arccos(scat.Cos_theta)
