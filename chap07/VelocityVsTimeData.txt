@@ -1,0 +1,13 @@
+Velocity  vs time data
+for a falling  mass
+time (s) velocity (m/s) uncertainty (m/s)
+ 2.23         139              16
+ 4.78         123              16
+ 7.21         115               4
+ 9.37          96               9
+11.64          62              17
+14.23          54              17
+16.55          10              12
+18.70          -3              15
+21.05         -13              18
+23.21         -55              10
