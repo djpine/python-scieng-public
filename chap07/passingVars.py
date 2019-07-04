@@ -1,6 +1,6 @@
 def test(s, v, t, l, a):
     s = "I am doing fine"
-    v = np.pi**2
+    v = np.pi ** 2
     t = (1.1, 2.9)
     l[-1] = 'end'
     a[0] = 963.2
@@ -20,7 +20,7 @@ print("s = {0:s}".format(s))
 print("v = {0:5.2f}".format(v))
 print("t = {}".format(t))
 print("l = {}".format(l))
-print("a = "),           # comma suppresses line feed
+print("a = "),  # comma suppresses line feed
 print(a)
 print('*************')
 print('*call "test"*')
@@ -32,7 +32,7 @@ print("s1 = {0:s}".format(s1))
 print("v1 = {0:5.2f}".format(v1))
 print("t1 = {}".format(t1))
 print("l1 = {}".format(l1))
-print("a1 = "),          # comma suppresses line feed
+print("a1 = "),  # comma suppresses line feed
 print(a1)
 print('*************')
 print("s = {0:s}".format(s))

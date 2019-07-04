@@ -1,10 +1,13 @@
 import numpy as np
+
+
 def sinc(x):
     if x == 0.0:
         y = 1.0
     else:
-        y = np.sin(x)/x
+        y = np.sin(x) / x
     return y
+
 
 """
 Introduction to Python for Science & Engineering

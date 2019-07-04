@@ -1,14 +1,15 @@
 def sinc(x):
-    y = []              # empty list to store results
-    for xx in x:        # loops over in x array
-        if xx == 0.0:   # appends result of 1.0 to
+    y = []  # empty list to store results
+    for xx in x:  # loops over in x array
+        if xx == 0.0:  # appends result of 1.0 to
             y += [1.0]  # y list if xx is zero
-        else:           # appends result of sin(xx)/xx to y
-            y += [np.sin(xx)/xx]  # list if xx is not zero
+        else:  # appends result of sin(xx)/xx to y
+            y += [np.sin(xx) / xx]  # list if xx is not zero
     return np.array(y)  # converts y to array and
 
-
     # returns array
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 

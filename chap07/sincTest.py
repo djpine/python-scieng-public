@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 def sinc(x):
-    z = np.where(x == 0.0, 1.0, np.sin(x)/x)
+    z = np.where(x == 0.0, 1.0, np.sin(x) / x)
     return z
 
 
@@ -14,7 +14,7 @@ fig, ax = plt.subplots(figsize=(8, 4))
 ax.plot(x, y)
 ax.axhline(color="gray", zorder=-1)
 ax.axvline(color="gray", zorder=-1)
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
