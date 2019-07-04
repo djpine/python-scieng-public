@@ -41,7 +41,7 @@ aprops = dict(facecolor='black', width=1, headlength=5,
               headwidth=5)
 for i, bpa in enumerate(bpavgs):
     ax1.annotate(tavgs[i], xy=(dtlab, bpa),
-                 xytext=((15, (-1)**(i % 2)*15)),
+                 xytext=((15, (-1) ** (i % 2) * 15)),
                  textcoords='offset points',
                  arrowprops=aprops, ha='left',
                  va=ytext[i % 2])
@@ -68,10 +68,10 @@ tavgs = ('AM average = {0:0.0f}'.format(Pulseavgs[0]),
          'PM average = {0:0.0f}'.format(Pulseavgs[1]))
 for i, pulse in enumerate(Pulseavgs):
     ax2.annotate(tavgs[i], xy=(dtlab, pulse),
-                 xytext=((15, -(-1)**(i)*15)),
+                 xytext=((15, -(-1) ** (i) * 15)),
                  textcoords='offset points',
                  arrowprops=aprops, ha='left',
-                 va=ytext[-i-1])
+                 va=ytext[-i - 1])
 
 ax2.axhline(y=PulsePM.mean(), color='k', lw=0.75, zorder=-1)
 ax2.axhline(y=PulseAM.mean(), color='k', dashes=(5, 2),
@@ -88,7 +88,7 @@ ax2.grid(dashes=(1, 2))
 
 fig.tight_layout()
 fig.savefig('./figures/BloodPressure.pdf')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

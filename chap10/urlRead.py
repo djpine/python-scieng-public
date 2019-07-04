@@ -2,8 +2,8 @@ import pandas as pd
 
 url1 = 'http://www.bankofcanada.ca/'
 url2 = 'valet/observations/group/FX_RATES_DAILY/csv?start_date='
-start_date = '2017-01-03'   # Earliest start date is 2017-01-03
-url = url1+url2+start_date  # Complete url to download csv file
+start_date = '2017-01-03'  # Earliest start date is 2017-01-03
+url = url1 + url2 + start_date  # Complete url to download csv file
 # Read in rates for different currencies for a range of dates
 rates = pd.read_csv(url, skiprows=39, index_col='date')
 rates.index = pd.to_datetime(rates.index)  # assures data type

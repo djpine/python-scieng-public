@@ -1,4 +1,5 @@
 from datetime import timedelta
+
 i_A = ewr.columns.get_loc("Arrival_time")  # i_A  = 6
 i_Ap = ewr.columns.get_loc("A_day")        # i_Ap = 7
 i_S = ewr.columns.get_loc("Scheduled")     # i_S  = 8
