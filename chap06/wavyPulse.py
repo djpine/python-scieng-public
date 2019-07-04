@@ -6,7 +6,7 @@ xdata, ydata = np.loadtxt('wavyPulseData.txt', unpack=True)
 
 # create x and y arrays for theory
 x = np.linspace(-10., 10., 200)
-y = np.sin(x) * np.exp(-(x/5.0)**2)
+y = np.sin(x) * np.exp(-(x / 5.0) ** 2)
 
 # create plot
 plt.figure(1, figsize=(6, 4))
