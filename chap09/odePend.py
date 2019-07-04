@@ -4,21 +4,21 @@ from scipy.integrate import odeint
 
 
 def f(y, t, params):
-    theta, omega = y      # unpack current values
+    theta, omega = y  # unpack current values
     Q, d, Omega = params  # unpack parameters
-    derivs = [omega,      # list of dy/dt=f functions
-              -omega/Q+np.sin(theta)+d*np.cos(Omega*t)]
+    derivs = [omega,  # list of dy/dt=f functions
+              -omega / Q + np.sin(theta) + d * np.cos(Omega * t)]
     return derivs
 
 
 # Parameters
-Q = 2.0          # quality factor (inverse damping)
-d = 1.5          # forcing amplitude
-Omega = 0.65     # drive frequency
+Q = 2.0  # quality factor (inverse damping)
+d = 1.5  # forcing amplitude
+Omega = 0.65  # drive frequency
 
 # Initial values
-theta0 = 0.0     # initial angular displacement
-omega0 = 0.0     # initial angular velocity
+theta0 = 0.0  # initial angular displacement
+omega0 = 0.0  # initial angular velocity
 
 # Bundle parameters for ODE solver
 params = [Q, d, Omega]
@@ -51,7 +51,7 @@ ax2.set_ylabel(r'$\omega$', fontsize=14)
 
 # Plot omega vs theta
 ax3 = fig.add_subplot(122)
-twopi = 2.0*np.pi
+twopi = 2.0 * np.pi
 ax3.plot(psoln[:, 0] % twopi, psoln[:, 1],
          dashes=(1, 2), ms=1, color='black')
 ax3.set_xlabel(r'$\theta$', fontsize=14)

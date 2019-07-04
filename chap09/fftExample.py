@@ -6,8 +6,8 @@ width = 2.0
 freq = 0.5
 
 t = np.linspace(-10, 10, 128)
-g = np.exp(-np.abs(t)/width) * np.sin(2.0*np.pi*freq*t)
-dt = t[1]-t[0]  # increment between times in time array
+g = np.exp(-np.abs(t) / width) * np.sin(2.0 * np.pi * freq * t)
+dt = t[1] - t[0]  # increment between times in time array
 
 G = fftpack.fft(g)  # FFT of g
 f = fftpack.fftfreq(g.size, d=dt)  # FFT frequenies
@@ -28,7 +28,7 @@ ax2.set_xlabel(r'$f$')
 ax2.set_ylabel(r'$G(f)$')
 fig.tight_layout()
 fig.savefig('figures/fftExample.pdf')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
