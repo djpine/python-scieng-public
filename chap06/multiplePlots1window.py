@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 # Define the sinc function, with output for x=0
 # defined as a special case to avoid division by zero
 def s(x):
-    a = np.where(x == 0., 1., np.sin(x)/x)
+    a = np.where(x == 0., 1., np.sin(x) / x)
     return a
 
 
@@ -53,7 +53,7 @@ ax3.set_title('sinc function')
 # avoid collisions between subplots
 fig.tight_layout()
 fig.savefig("figures/multiplePlots1window.pdf")
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

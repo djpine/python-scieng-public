@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(-2*np.pi, 2*np.pi, 200)
+x = np.linspace(-2 * np.pi, 2 * np.pi, 200)
 sin, cos, tan = np.sin(x), np.cos(x), np.tan(x)
-csc, sec, cot = 1.0/sin, 1.0/cos, 1.0/tan
+csc, sec, cot = 1.0 / sin, 1.0 / cos, 1.0 / tan
 
 plt.close('all')  # Closes all open figure windows
 fig, ax = plt.subplots(2, 3, figsize=(9.5, 6),
@@ -19,8 +19,8 @@ ax[1, 1].plot(x, np.ma.masked_where(np.abs(sec) > 20., sec),
 ax[1, 2].plot(x, np.ma.masked_where(np.abs(cot) > 20., cot),
               color='violet')
 ax[0, 0].set_ylim(-5, 5)
-ax[0, 0].set_xlim(-2*np.pi, 2*np.pi)
-ax[0, 0].set_xticks(np.pi*np.array([-2, -1, 0, 1, 2]))
+ax[0, 0].set_xlim(-2 * np.pi, 2 * np.pi)
+ax[0, 0].set_xticks(np.pi * np.array([-2, -1, 0, 1, 2]))
 ax[0, 0].set_xticklabels([r'-2$\pi$', r'-$\pi$', '0',
                           r'$\pi$', r'2$\pi$'])
 
@@ -32,9 +32,8 @@ for i in range(2):
         ax[i, j].axhline(color='gray', zorder=-1)
         ax[i, j].set_ylabel(ylab[i][j])
 
-fig.show()
 fig.savefig('figures/multiplePlotsGrid.pdf')
-fig.canvas.manager.window.raise_()  # fig to front
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
