@@ -8,9 +8,9 @@ mpg = 30.             # car mileage
 speed = 60.           # average speed
 costPerGallon = 3.05  # price of gasoline
 
-time = distance/speed
-gallons = distance/mpg
-cost = gallons*costPerGallon
+time = distance / speed
+gallons = distance / mpg
+cost = gallons * costPerGallon
 print(time, gallons, cost)
 
 """
