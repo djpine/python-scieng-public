@@ -6,7 +6,7 @@ import scipy.optimize
 
 # define fitting function
 def GaussPolyBase(f, a, b, c, P, fp, fw):
-    return a+b*f+c*f*f+P*np.exp(-0.5*((f-fp)/fw)**2)
+    return a + b * f + c * f * f + P * np.exp(-0.5 * ((f - fp) / fw) ** 2)
 
 
 # read in spectrum from data file
@@ -36,7 +36,7 @@ s_fit = GaussPolyBase(f_fit, a, b, c, P, fp, fw)
 
 # Calculate residuals and reduced chi squared
 resids = s - GaussPolyBase(f, a, b, c, P, fp, fw)
-redchisqr = ((resids/ds)**2).sum()/float(f.size-6)
+redchisqr = ((resids / ds) ** 2).sum() / float(f.size - 6)
 
 # Create figure window to plot data
 fig = plt.figure(1, figsize=(9.5, 6.5))
@@ -75,7 +75,7 @@ ax2.set_ylim(-20, 20)
 ax2.set_yticks((-20, 0, 20))
 
 fig.savefig("FitSpectrum.pdf")
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
