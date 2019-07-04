@@ -17,30 +17,30 @@ class Colloid():
 
     def pmass(self):
         """Calculate particle mass"""
-        return self.pdens*pi*self.pdiam**3/6.0
+        return self.pdens * pi * self.pdiam ** 3 / 6.0
 
     def friction(self):
-        return 3.0*pi*self.lvisc*self.pdiam
+        return 3.0 * pi * self.lvisc * self.pdiam
 
     def vsed(self):
         """Calculate particle sedimentation velocity"""
         g = 9.80  # gravitational acceleration
-        grav = (pi/6.0)*(self.pdens-self.ldens)*g*self.pdiam**3
-        return grav/self.friction()
+        grav = (pi / 6.0) * (self.pdens - self.ldens) * g * self.pdiam ** 3
+        return grav / self.friction()
 
     def diff_coef(self):
         """Calculate particle diffusion coefficient"""
         kB = 1.38064852e-23
-        return kB*self.tempK/self.friction()
+        return kB * self.tempK / self.friction()
 
     def grav_height(self):
         """Calculate gravitational height of particles"""
         D = self.diff_coef()
         v = self.vsed()
         try:
-            hg = D/v
+            hg = D / v
         except ZeroDivisionError:
-            hg = inf   # when liquid & particle density equal
+            hg = inf  # when liquid & particle density equal
         return hg
 
     def set_tempC(self, tempC):
@@ -57,10 +57,10 @@ class HairyColloid(Colloid):
         """Initialize properties from parent Colloid"""
         super().__init__(pdiam, pdens, lvisc, ldens, tempC)
         self.hlen = hlen  # length of hairs on particles
-        self.hdiam = pdiam + 2.0*hlen
+        self.hdiam = pdiam + 2.0 * hlen
 
     def friction(self):
-        return 3.0*pi*self.lvisc*self.hdiam
+        return 3.0 * pi * self.lvisc * self.hdiam
 
 
 if __name__ == "__main__":

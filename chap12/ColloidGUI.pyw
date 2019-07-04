@@ -65,24 +65,24 @@ class Form(QDialog):
 
         grid = QGridLayout()
         # inputs
-        grid.addWidget(pdiamLabel, 0, 0)       # Diameter
+        grid.addWidget(pdiamLabel, 0, 0)  # Diameter
         grid.addWidget(self.pdiamSpinBox, 0, 1)
-        grid.addWidget(pdensLabel, 1, 0)       # Density
+        grid.addWidget(pdensLabel, 1, 0)  # Density
         grid.addWidget(self.pdensSpinBox, 1, 1)
-        grid.addWidget(lviscLabel, 2, 0)       # Viscosity
+        grid.addWidget(lviscLabel, 2, 0)  # Viscosity
         grid.addWidget(self.lviscSpinBox, 2, 1)
-        grid.addWidget(ldensLabel, 3, 0)       # Densiity
+        grid.addWidget(ldensLabel, 3, 0)  # Densiity
         grid.addWidget(self.ldensSpinBox, 3, 1)
-        grid.addWidget(tempLabel, 4, 0)        # Temp (C)
+        grid.addWidget(tempLabel, 4, 0)  # Temp (C)
         grid.addWidget(self.tempCSpinBox, 4, 1)
-        grid.addWidget(brushLabel, 0, 2)       # Brush length
+        grid.addWidget(brushLabel, 0, 2)  # Brush length
         grid.addWidget(self.brushSpinBox, 0, 3)
         # outputs
-        grid.addWidget(hydroDiamLabel, 1, 2)   # Hydro diam
+        grid.addWidget(hydroDiamLabel, 1, 2)  # Hydro diam
         grid.addWidget(self.hydroDiam, 1, 3)
-        grid.addWidget(diffCoefLabel, 2, 2)    # Diff coef
+        grid.addWidget(diffCoefLabel, 2, 2)  # Diff coef
         grid.addWidget(self.diffCoef, 2, 3)
-        grid.addWidget(vsedLabel, 3, 2)        # Sed vel
+        grid.addWidget(vsedLabel, 3, 2)  # Sed vel
         grid.addWidget(self.vsed, 3, 3)
         grid.addWidget(gravHeightLabel, 4, 2)  # Grav height
         grid.addWidget(self.gravHeight, 4, 3)
@@ -99,32 +99,32 @@ class Form(QDialog):
         self.updateUi()
 
     def updateUi(self):
-        tempK = self.tempCSpinBox.value()+273.15
-        eta = self.lviscSpinBox.value()*0.001      # SI units
-        pdiam = self.pdiamSpinBox.value()*1e-9     # SI units
-        pdens = self.pdensSpinBox.value()          # SI units
-        ldens = self.ldensSpinBox.value()          # SI units
-        hdiam = pdiam+2.0e-9*self.brushSpinBox.value()   # SI
-        friction = 3.0*pi*eta*hdiam
-        D = Boltzmann*tempK/friction
-        vsed = (pi/6.0)*(pdens-ldens)*g*pdiam**3/friction
+        tempK = self.tempCSpinBox.value() + 273.15
+        eta = self.lviscSpinBox.value() * 0.001   # SI units
+        pdiam = self.pdiamSpinBox.value() * 1e-9  # SI units
+        pdens = self.pdensSpinBox.value()         # SI units
+        ldens = self.ldensSpinBox.value()         # SI units
+        hdiam = pdiam + 2.0e-9 * self.brushSpinBox.value()  # SI units
+        friction = 3.0 * pi * eta * hdiam
+        D = Boltzmann * tempK / friction
+        vsed = (pi / 6.0) * (pdens - ldens) * g * pdiam ** 3 / friction
         try:
-            hg = D/vsed    # gravitational height in SI units
+            hg = D / vsed  # gravitational height in SI units
         except ZeroDivisionError:
-            hg = inf   # when liquid & particle density equal
+            hg = inf  # when liquid & particle density equal
         self.diffCoef.setText("{0:0.3g} \u03BCm\u00B2/s"
-                              .format(D*1e12))
-        self.vsed.setText("{0:0.3g} nm/s".format(vsed*1e9))
+                              .format(D * 1e12))
+        self.vsed.setText("{0:0.3g} nm/s".format(vsed * 1e9))
         self.hydroDiam.setText("{0:0.3g} nm"
-                               .format(hdiam*1e9))
+                               .format(hdiam * 1e9))
         # Set gravitational height, with exception for vsed=0
         if abs(hg) < 0.001:  # small values in microns
             self.gravHeight.setText("{0:0.3g} \u03BCm"
-                                    .format(hg*1e6))
+                                    .format(hg * 1e6))
         elif abs(hg) < inf:  # large values in millimeters
             self.gravHeight.setText("{0:0.3g} mm"
-                                    .format(hg*1e3))
-        else:                # infinity (\u221E)
+                                    .format(hg * 1e3))
+        else:  # infinity (\u221E)
             self.gravHeight.setText("\u221E")
         return
 
