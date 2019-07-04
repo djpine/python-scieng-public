@@ -5,9 +5,9 @@ mpg = 30.             # car mileage
 speed = 60.           # average speed
 costPerGallon = 2.85  # price of gas
 
-time = distance/speed
-gallons = distance/mpg
-cost = gallons*costPerGallon
+time = distance / speed
+gallons = distance / mpg
+cost = gallons * costPerGallon
 
 """
 Introduction to Python for Science & Engineering
