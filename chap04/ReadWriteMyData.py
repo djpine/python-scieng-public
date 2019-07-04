@@ -1,4 +1,5 @@
 import numpy as np
+
 dataPt, time, height, error = np.loadtxt("mydata.txt",
                                          skiprows=5,
                                          unpack=True)

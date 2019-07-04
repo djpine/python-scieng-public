@@ -20,7 +20,7 @@ print(' ***')
 print('G. {0:0.3f}'.format(float1))  # 3 decimal places
 print('H. {0:6.3f}'.format(float1))  # 6 spaces, 3 decimals
 print('I. {0:8.3f}'.format(float1))  # 8 spaces, 3 decimals
-print(2*'J.  {0:8.3f}   '.format(float1))
+print(2 * 'J.  {0:8.3f}   '.format(float1))
 print(' ****')
 print('K. {0:0.3e}'.format(float2))
 print('L. {0:12.3e}'.format(float2))  # 12 spaces, 3 decimals
