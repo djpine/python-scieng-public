@@ -56,7 +56,7 @@ for i in range(2):
 fig.subplots_adjust(left=0.06, bottom=0.07, right=0.99,
                     top=0.99, wspace=0.06, hspace=0.09)
 fig.savefig('./figures/contour4.pdf')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

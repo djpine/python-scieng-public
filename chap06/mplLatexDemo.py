@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 
 
 def f0(t, omega, gamma, tau):
-    wt = omega*t
-    f1 = np.sin(wt) + (np.cos(wt)-1.0)/wt
-    f2 = 1.0+(gamma/omega)*f1
-    return np.exp(-t*f2/tau)
+    wt = omega * t
+    f1 = np.sin(wt) + (np.cos(wt) - 1.0) / wt
+    f2 = 1.0 + (gamma / omega) * f1
+    return np.exp(-t * f2 / tau)
 
 
 omega = 12.0
@@ -47,7 +47,7 @@ ax.text(0.85, 0.35,
 
 fig.tight_layout()
 fig.savefig('./figures/mplLatexDemo.pdf')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
