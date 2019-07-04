@@ -4,7 +4,6 @@ if a % 2 == 0:
 else:
     print("{0:0d} is an odd number.".format(a))
 
-
 """
 Introduction to Python for Science & Engineering
 by David J. Pine

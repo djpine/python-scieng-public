@@ -3,7 +3,6 @@ if a < 0:
     a = -a
 print("The absolute value is {}".format(a))
 
-
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
