@@ -26,7 +26,7 @@ ani = anim.ArtistAnimation(fig, artists=ims, interval=10,
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('sncs2d.mp4', writer='ffmpeg')  # need ffmpeg !)
 
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

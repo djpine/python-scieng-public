@@ -4,7 +4,7 @@ import matplotlib.animation as anim
 from PIL import Image, ImageEnhance
 from glob import glob
 
-framesDir = 'movieSyncFrames'     # movie frames directory
+framesDir = 'movieSyncFrames'  # movie frames directory
 framesData = 'movieSyncData.csv'  # data file with intensities
 time, uv, blue = np.loadtxt(framesData, skiprows=1,
                             unpack=True, delimiter=',')
@@ -15,7 +15,7 @@ fig.subplots_adjust(bottom=0.15, top=0.95, left=0, right=0.98)
 ax1.axis('off')
 ax2.set_xlim([0, time.max()])
 ax2.set_ylim([0.85, 1.05])
-ax2.plot(time, uv+blue, dashes=(5, 2), color='gray', lw=1)
+ax2.plot(time, uv + blue, dashes=(5, 2), color='gray', lw=1)
 ax2.set_xlabel('time (s)')
 ax2.set_ylabel('normalized integrated intensity')
 ax2.set_yticks([0.85, 0.9, 0.95, 1., 1.05])
@@ -33,7 +33,7 @@ blueM = np.where(blue > 0.9, blue, np.nan)
 
 # Dynamic parts of plot come next
 ims = []
-for i, fname in enumerate(sorted(glob(framesDir+'/sp*.png'))):
+for i, fname in enumerate(sorted(glob(framesDir + '/sp*.png'))):
     # print(fname)  # uncomment to follow loading of image frames
     if uv[i] >= blue[i]:
         im = ax1.imshow(Image.open(fname), animated=True)

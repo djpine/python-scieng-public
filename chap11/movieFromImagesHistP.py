@@ -7,9 +7,9 @@ from PIL import Image
 
 
 def angle(x, y):
-    a = np.array([x[0]-x[1], y[0]-y[1]])
-    b = np.array([x[2]-x[1], y[2]-y[1]])
-    cs = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
+    a = np.array([x[0] - x[1], y[0] - y[1]])
+    b = np.array([x[2] - x[1], y[2] - y[1]])
+    cs = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
     if cs > 1.0:
         cs = 1.0
     elif cs < -1.0:
@@ -29,7 +29,7 @@ for i, fname in enumerate(sorted(glob('pngs/s0*.png'))):
     im = ax1.imshow(Image.open(fname), animated=True)  # image
     x = np.array([r['x1'][i], r['xc'][i], r['x2'][i]])  # 3 balls
     y = np.array([r['y1'][i], r['yc'][i], r['y2'][i]])  # joined by
-    ima, = ax1.plot(x, y, 'o-', color=[1, 1, 0.7])      # 2 lines
+    ima, = ax1.plot(x, y, 'o-', color=[1, 1, 0.7])  # 2 lines
     theta = angle(x, y)
     angles.append(theta)
     imb = ax1.text(0.05, 0.95, 'frame = {0:d}\nangle = {1:0.0f}°'
@@ -37,7 +37,7 @@ for i, fname in enumerate(sorted(glob('pngs/s0*.png'))):
                    color=[1, 1, 0.7], transform=ax1.transAxes)
     a, b = np.histogram(angles, bins=15, range=(90, 180),
                         density=True)  # normed=True is depricated
-    xx = 0.5*(b[:-1]+b[1:])
+    xx = 0.5 * (b[:-1] + b[1:])
     ax2.set_ylim(0, 0.03)
     ax2.set_xlabel('angle (degrees)')
     im2, = ax2.plot(xx, a, '-oC0')
@@ -51,7 +51,7 @@ ani = anim.ArtistAnimation(fig, artists=ims, interval=33,
                            repeat=False, blit=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('movieFromImagesHistP.mp4', writer='ffmpeg')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

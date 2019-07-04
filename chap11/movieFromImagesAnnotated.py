@@ -7,9 +7,9 @@ from PIL import Image
 
 
 def angle(x, y):
-    a = np.array([x[0]-x[1], y[0]-y[1]])
-    b = np.array([x[2]-x[1], y[2]-y[1]])
-    cs = np.dot(a, b)/(np.linalg.norm(a)*np.linalg.norm(b))
+    a = np.array([x[0] - x[1], y[0] - y[1]])
+    b = np.array([x[2] - x[1], y[2] - y[1]])
+    cs = np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
     if cs > 1.0:
         cs = 1.0
     elif cs < -1.0:
@@ -44,7 +44,7 @@ ani = animation.ArtistAnimation(fig, artists=ims, interval=33,
                                 repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('movieFromImagesAnnotated.mp4', writer='ffmpeg')
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering

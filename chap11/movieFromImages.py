@@ -18,7 +18,7 @@ ani = anim.ArtistAnimation(fig, artists=ims, interval=33,
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani.save('pacb.mp4', writer='ffmpeg')  # ffmpeg
 
-fig.show()
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
