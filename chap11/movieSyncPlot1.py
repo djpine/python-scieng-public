@@ -6,8 +6,7 @@ from glob import glob
 
 framesDir = 'movieSyncFrames'  # movie frames directory
 framesData = 'movieSyncData.csv'  # data file with intensities
-time, uv, blue = np.loadtxt(framesData, skiprows=1,
-                            unpack=True, delimiter=',')
+time, uv, blue = np.loadtxt(framesData, skiprows=1, unpack=True, delimiter=',')
 
 # Static parts of plot come first
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9, 4))
@@ -21,9 +20,9 @@ ax2.set_ylabel('normalized integrated intensity')
 ax2.set_yticks([0.85, 0.9, 0.95, 1., 1.05])
 # Set up plot containers for ax2
 plotdotUV, = ax2.plot(np.nan, np.nan, 'o', color='violet',
-                      ms=6, alpha=0.7)
+    ms=6, alpha=0.7)
 plotdotBlue, = ax2.plot(np.nan, np.nan, 'o', color='blue',
-                        ms=6, alpha=0.7)
+    ms=6, alpha=0.7)
 plotlineB, = ax2.plot(np.nan, np.nan, '-', color='blue', lw=2)
 plotlineU, = ax2.plot(np.nan, np.nan, '-', color='violet', lw=2)
 
@@ -38,14 +37,14 @@ for i, fname in enumerate(sorted(glob(framesDir + '/sp*.png'))):
     if uv[i] >= blue[i]:
         im = ax1.imshow(Image.open(fname), animated=True)
         textUV = ax1.text(320, 20, 'UV ON', color='white',
-                          weight='bold')
+            weight='bold')
     else:
         img0 = Image.open(fname)
         # Increase brightness of uv-illuminated images
         img0 = ImageEnhance.Brightness(img0).enhance(2.5)
         im = ax1.imshow(img0, animated=True)
         textUV = ax1.text(320, 20, 'UV OFF', color='yellow',
-                          weight='bold')
+            weight='bold')
     ims.append([im, textUV])
 
 
@@ -58,11 +57,11 @@ def animate(i):
 
 
 ani1 = anim.ArtistAnimation(fig, artists=ims, interval=33,
-                            repeat=False)
+    repeat=False)
 ani2 = anim.FuncAnimation(fig, func=animate,
-                          frames=range(time.size), interval=33,
-                          repeat=False, blit=False,
-                          event_source=ani1.event_source)
+    frames=range(time.size), interval=33,
+    repeat=False, blit=False,
+    event_source=ani1.event_source)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
 # ani2.save('movieSyncPlot1.mp4', extra_anim=(ani1, ),
 #           writer='ffmpeg', dpi=200)
