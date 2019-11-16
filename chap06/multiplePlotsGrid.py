@@ -25,6 +25,7 @@ ax[0, 0].set_xticklabels([r'-2$\pi$', r'-$\pi$', '0',
                           r'$\pi$', r'2$\pi$'])
 
 ax[0, 2].patch.set_facecolor('lightgray')
+ax[1, 1].set_xlabel('angle [radians]')
 
 ylab = [['sin', 'cos', 'tan'], ['csc', 'sec', 'cot']]
 for i in range(2):
