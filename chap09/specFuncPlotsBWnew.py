@@ -1,5 +1,4 @@
 import numpy as np
-import numpy.polynomial
 import scipy.special
 import matplotlib.pyplot as plt
 
@@ -55,10 +54,10 @@ ax[1, 1].text(0.5, 0.95, 'Airy', ha='center',
 
 # Legendre polynomials
 x = np.linspace(-1, 1, 256)
-lp0 = numpy.polynomial.Legendre.basis(0)(x)
-lp1 = numpy.polynomial.Legendre.basis(1)(x)
-lp2 = numpy.polynomial.Legendre.basis(2)(x)
-lp3 = numpy.polynomial.Legendre.basis(3)(x)
+lp0 = np.polynomial.Legendre.basis(0)(x)
+lp1 = np.polynomial.Legendre.basis(1)(x)
+lp2 = np.polynomial.Legendre.basis(2)(x)
+lp3 = np.polynomial.Legendre.basis(3)(x)
 ax[2, 0].plot(x, lp0, color='black')
 ax[2, 0].plot(x, lp1, color='black', dashes=(5, 2))
 ax[2, 0].plot(x, lp2, color='black', dashes=(3, 2))
@@ -71,10 +70,10 @@ ax[2, 0].text(0.5, 0.9, 'Legendre', ha='center',
 
 # Laguerre polynomials
 x = np.linspace(-5, 8, 256)
-lg0 = numpy.polynomial.Laguerre.basis(0)(x)
-lg1 = numpy.polynomial.Laguerre.basis(1)(x)
-lg2 = numpy.polynomial.Laguerre.basis(2)(x)
-lg3 = numpy.polynomial.Laguerre.basis(3)(x)
+lg0 = np.polynomial.Laguerre.basis(0)(x)
+lg1 = np.polynomial.Laguerre.basis(1)(x)
+lg2 = np.polynomial.Laguerre.basis(2)(x)
+lg3 = np.polynomial.Laguerre.basis(3)(x)
 ax[2, 1].plot(x, lg0, color='black')
 ax[2, 1].plot(x, lg1, color='black', dashes=(5, 2))
 ax[2, 1].plot(x, lg2, color='black', dashes=(3, 2))
