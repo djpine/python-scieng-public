@@ -7,10 +7,10 @@ fig, ax = plt.subplots(3, 2, figsize=(9.3, 6.5))
 
 # create arrays for a few Bessel functions and plot them
 x = np.linspace(0, 20, 256)
-j0 = scipy.special.jn(0, x)
-j1 = scipy.special.jn(1, x)
-y0 = scipy.special.yn(0, x)
-y1 = scipy.special.yn(1, x)
+j0 = scipy.special.jv(0, x)  # see also j0(x)
+j1 = scipy.special.jv(1, x)  # see also j1(x)
+y0 = scipy.special.yv(0, x)  # see also y0(x)
+y1 = scipy.special.yv(1, x)  # see also y1(x)
 ax[0, 0].plot(x, j0, color='black')
 ax[0, 0].plot(x, j1, color='black', dashes=(5, 2))
 ax[0, 0].plot(x, y0, color='black', dashes=(3, 2))
@@ -84,9 +84,9 @@ ax[2, 1].set_xlim(-5, 8)
 ax[2, 1].set_ylim(-5, 10)
 ax[2, 1].text(0.5, 0.9, 'Laguerre', ha='center',
               va='top', transform=ax[2, 1].transAxes)
-fig.tight_layout()
-fig.savefig("figures/specFuncPlotsBW.pdf")
-fig.show()
+plt.tight_layout()
+plt.savefig("figures/specFuncPlotsBW.pdf")
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
