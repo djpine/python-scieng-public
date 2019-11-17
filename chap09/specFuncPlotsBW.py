@@ -91,8 +91,8 @@ plt.show()
 """
 Introduction to Python for Science & Engineering
 by David J. Pine
-Code last edited: 2018-09-17
+Code last edited: 2019-11-17
 
-Demonstrates calls to SciPy special functions and
-plots them.
+Demonstrates calls to SciPy special functions &
+NumPy polynomial functions and plots them.
 """
