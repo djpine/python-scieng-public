@@ -10,10 +10,10 @@ def norm(n):
 
 x = np.linspace(-5, 5, 256)
 ep = np.exp(-0.5 * x * x)
-hmq0 = scipy.special.eval_hermite(0, x) * ep / norm(0)
-hmq1 = scipy.special.eval_hermite(1, x) * ep / norm(1)
-hmq2 = scipy.special.eval_hermite(2, x) * ep / norm(2)
-hmq3 = scipy.special.eval_hermite(3, x) * ep / norm(3)
+hmq0 = np.polynomial.Hermite.basis(0)(x) * ep / norm(0)
+hmq1 = np.polynomial.Hermite.basis(1)(x) * ep / norm(1)
+hmq2 = np.polynomial.Hermite.basis(2)(x) * ep / norm(2)
+hmq3 = np.polynomial.Hermite.basis(3)(x) * ep / norm(3)
 
 fig, ax = plt.subplots(1, 1)
 

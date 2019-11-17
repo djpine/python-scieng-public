@@ -3,10 +3,10 @@ import scipy.special
 import matplotlib.pyplot as plt
 
 x = np.linspace(-1, 1, 256)
-cb0 = np.polyval(scipy.special.chebyt(0), x)
-cb1 = scipy.special.eval_chebyt(1, x)
-cb2 = np.polyval(scipy.special.chebyt(2), x)
-cb3 = scipy.special.eval_chebyt(3, x)
+cb0 = np.polynomial.Chebyshev.basis(0)(x)
+cb1 = np.polynomial.Chebyshev.basis(1)(x)
+cb2 = np.polynomial.Chebyshev.basis(2)(x)
+cb3 = np.polynomial.Chebyshev.basis(3)(x)
 
 fig, ax = plt.subplots(1, 1)
 
