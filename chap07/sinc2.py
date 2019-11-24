@@ -21,8 +21,8 @@ ax.plot(x, y)
 ax.set_xlim(-10, 10)
 ax.axhline(color="gray", zorder=-1)
 ax.axvline(color="gray", zorder=-1)
-fig.savefig("sinc2.pdf")
-fig.show()
+plt.savefig("sinc2.pdf")
+plt.show()
 
 """
 Introduction to Python for Science & Engineering
