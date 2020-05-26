@@ -12,9 +12,10 @@ warnings.filterwarnings('ignore')
 def move(L, N, eps):  # generator for updating
     x = np.sort(L * np.random.rand(N))  # speeds up algorithm
     t = 0
+    changes = np.zeros(N, dtype="int")
     moves = 1
     while moves > 0:
-        changes = np.zeros(N, dtype="int")
+        changes.fill(0)
         xc = np.copy(x)
         for i in range(N - 1):
             j = i + 1
@@ -43,7 +44,7 @@ def move(L, N, eps):  # generator for updating
         yield t, moves, x, changes
 
 
-N, L, eps = 80, 100, 0.25  # inputs for algorithm
+N, L, eps = 54, 100, 0.25  # inputs for algorithm
 
 circumference = float(L)
 radius = circumference / (2.0 * np.pi)
@@ -95,7 +96,7 @@ ani = anim.FuncAnimation(fig=fig, func=updatePlot,
                          interval=10, save_count=25000,
                          blit=False, repeat=False)
 # Uncomment to save as mp4 movie file.  Need ffmpeg.
-# ani.save('randOrgLily.mp4', writer='ffmpeg', dpi=200)
+# ani.save('randOrgLily84.mp4', writer='ffmpeg', dpi=200)
 plt.show()
 
 """
