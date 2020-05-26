@@ -5,9 +5,10 @@ import matplotlib.animation as anim
 
 def move(L, N, eps):  # generator for updating
     x = np.sort(L * np.random.rand(N))  # speeds up algorithm
+    changes = np.zeros(N, dtype="int")
     moves = 1
     while moves > 0:
-        changes = np.zeros(N, dtype="int")
+        changes.fill(0)
         xc = np.copy(x)
         for i in range(N - 1):
             j = i + 1
