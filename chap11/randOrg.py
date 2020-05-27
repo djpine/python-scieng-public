@@ -8,7 +8,7 @@ def move(L, N, eps):  # generator for updating
     changes = np.zeros(N, dtype="int")
     moves = 1
     while moves > 0:
-        changes.fill(0)
+        changes.fill(0)  # tally changes starting with zero
         xc = np.copy(x)
         for i in range(N - 1):
             j = i + 1
